@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IdentificacaoActivity"
+    android:background="@drawable/telaidentificacao">
+
+    <View
+        android:id="@+id/conteinerTopo_Identificacao"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/seringa_tela_data"
+        app:layout_constraintBottom_toBottomOf="@id/conteinerTopo_Identificacao"
+        app:layout_constraintEnd_toEndOf="@id/conteinerTopo_Identificacao"
+        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintStart_toStartOf="@id/conteinerTopo_Identificacao"
+        app:layout_constraintTop_toTopOf="@id/conteinerTopo_Identificacao"
+        app:layout_constraintVertical_bias="0.7"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CÁLCULO GASOMETRIA"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="200dp"
+        tools:ignore="MissingConstraints"
+        android:textColor="@color/white"
+        android:textSize="25dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_nome"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        app:boxStrokeColor="@color/white"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/red"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/conteinerTopo_Identificacao">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_nome"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/backgroun_idittxt"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_idade"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:boxStrokeColor="@color/white"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/red"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/txt_nome">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_idade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_idade"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/backgroun_idittxt"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_sexo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:boxStrokeColor="@color/white"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/red"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/txt_idade">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_sexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_sexo"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/backgroun_idittxt"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/idit_buttom_entrar_identificacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:padding="20dp"
+        android:background="@drawable/backgound_button_selector"
+        android:textAllCaps="false"
+        android:enabled="true"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="@string/hint_button_entrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_sexo" />
+
+    <ProgressBar
+        android:id="@+id/progresso_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idit_buttom_entrar_identificacao"
+        app:layout_constraintVertical_bias="0.274" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=" copyright ©"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progresso_circular" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

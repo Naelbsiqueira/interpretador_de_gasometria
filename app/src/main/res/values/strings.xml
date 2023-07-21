@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Calculo Gasometria</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_password">Senha</string>
+    <string name="hint_button_entrar">Entrar</string>
+    <string name="txt_tela_cadastro">Não tem conta?</string>
+    <string name="txt_calcular_input_data">Calcular</string>
+    <string name="txt_hidrogenio">PH</string>
+    <string name="txt_potassio">Potássio</string>
+    <string name="txt_bicarbonato">HCO³</string>
+    <string name="txt_oxigenio">PO²</string>
+    <string name="txt_gascarbonico">PCO²</string>
+    <string name="txt_nome">Digite seu nome</string>
+    <string name="txt_idade">Sua idade</string>
+    <string name="txt_sexo">Sexo</string>
+    <string name="txt_ou">ou</string>
+    <string name="txt_cadastrar">Cadastrar-se</string>
+    <string name="txt_eviar">Enviar</string>
+    <string name="txt_calculo_gasometria">CÁLCULO GASOMETRIA</string>
+    <string name="txt_direitos_reservado">Copyright ©</string>
+    <string name="txt_calculando">Calculando</string>
+
+
+</resources>

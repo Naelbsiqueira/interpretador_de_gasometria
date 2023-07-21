@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Gasometria" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary"> @color/blue_three</item>
+        <item name="colorSecondary"> @color/blue_two</item>
+        <item name="colorTertiary"> @color/white</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Gasometria" parent="Base.Theme.Gasometria" />
+</resources>

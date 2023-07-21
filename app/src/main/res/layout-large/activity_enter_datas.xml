@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnterDatasActivity"
+    android:background="@drawable/tela_input"
+    tools:ignore="MissingDefaultResource">
+    <View
+        android:id="@+id/conteinerTopo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/background_view_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/seringa"
+        app:layout_constraintBottom_toBottomOf="@id/conteinerTopo"
+        app:layout_constraintEnd_toEndOf="@id/conteinerTopo"
+        app:layout_constraintStart_toStartOf="@id/conteinerTopo"
+        app:layout_constraintTop_toTopOf="@id/conteinerTopo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_ph"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/white"
+        android:layout_marginTop="40dp"
+        app:errorEnabled="true"
+        android:gravity="center"
+        app:errorTextColor="@color/red"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conteinerTopo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_ph"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/txt_hidrogenio"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:textSize="18sp"
+            android:background="@drawable/backgroun_idittxt"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_potassio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/white"
+        app:errorEnabled="true"
+        android:gravity="center"
+        app:errorTextColor="@color/red"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_ph">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_potassio"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/txt_potassio"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:textSize="18sp"
+            android:background="@drawable/backgroun_idittxt"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_oxigenio"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:boxStrokeColor="@color/white"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/red"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_potassio">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_oxigenio"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgroun_idittxt"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:hint="@string/txt_oxigenio"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_gascarbonico"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/white"
+        app:errorEnabled="true"
+        android:gravity="center"
+        app:errorTextColor="@color/red"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_oxigenio">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_gascarbonico"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/txt_gascarbonico"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:textSize="18sp"
+            android:background="@drawable/backgroun_idittxt"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_bicarbonato"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:boxStrokeColor="@color/white"
+        app:errorEnabled="true"
+        android:gravity="center"
+        app:errorTextColor="@color/red"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_gascarbonico">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_bicarbonato"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgroun_idittxt"
+            android:gravity="center"
+            android:hint="@string/txt_bicarbonato"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/idit_calcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/backgound_button_selector"
+        android:enabled="true"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/txt_calcular_input_data"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_bicarbonato"
+        app:layout_constraintVertical_bias="0.195" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
